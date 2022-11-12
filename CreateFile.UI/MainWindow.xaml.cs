@@ -30,7 +30,8 @@ namespace CreateFile.UI
             }
 
             string fileName = FileNameTextBox.Text.Trim();
-            if (string.IsNullOrWhiteSpace(fileName) || (fileName.IndexOfAny(System.IO.Path.GetInvalidFileNameChars()) >= 0))
+            string fileFullName = Path.Combine(path, fileName);
+            if (string.IsNullOrWhiteSpace(fileName) || (fileName.IndexOfAny(System.IO.Path.GetInvalidFileNameChars()) >= 0) || Directory.Exists(fileFullName))
             {
                 InfoTextBox.Foreground = Brushes.Red;
                 InfoTextBox.Text = "The file name is incorrect!";
@@ -49,7 +50,7 @@ namespace CreateFile.UI
             string unitStr = UnitComboBox.Text;
             unit = (Unit)Enum.Parse(typeof(Unit), unitStr);
 
-            string result = await CreateFileHelper.CreateFileAsync(new FileInfo(Path.Combine(path,fileName)), size, unit);
+            string result = await CreateFileHelper.CreateFileAsync(new FileInfo(fileFullName), size, unit);
             InfoTextBox.Foreground = Brushes.Green;
             InfoTextBox.Text = result;
         }
