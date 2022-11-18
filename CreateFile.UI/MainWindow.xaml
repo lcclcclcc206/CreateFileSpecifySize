@@ -33,11 +33,11 @@
         <TextBlock Grid.Row="1" Grid.Column="1" FontSize="18px" Padding="10,0,10,0"  VerticalAlignment="Center" HorizontalAlignment="Left">Size</TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="2" FontSize="18px" Padding="10,0,10,0"  VerticalAlignment="Center" HorizontalAlignment="Left">Unit</TextBlock>
         <!--Row 2-->
-        <TextBox x:Name="FileNameTextBox" Grid.Row="2" Margin="4,4,4,4" FontSize="18px" VerticalContentAlignment="Center">
+        <TextBox x:Name="FileNameTextBox" Grid.Row="2" Margin="4,4,4,12" FontSize="18px" VerticalContentAlignment="Center">
         </TextBox>
-        <TextBox x:Name="SizeTextBox" Grid.Row="2" Grid.Column="1" Margin="4,4,4,4" FontSize="18px" VerticalContentAlignment="Center">
+        <TextBox x:Name="SizeTextBox" Grid.Row="2" Grid.Column="1" Margin="4,4,4,12" FontSize="18px" VerticalContentAlignment="Center">
         </TextBox>
-        <ComboBox x:Name="UnitComboBox" Grid.Row="2" Grid.Column="2" Margin="4,4,4,4" FontSize="18px" VerticalContentAlignment="Center" SelectedIndex="1">
+        <ComboBox x:Name="UnitComboBox" Grid.Row="2" Grid.Column="2" Margin="4,4,4,12" FontSize="18px" VerticalContentAlignment="Center" SelectedIndex="1">
             <ComboBoxItem>B</ComboBoxItem>
             <ComboBoxItem>KB</ComboBoxItem>
             <ComboBoxItem>MB</ComboBoxItem>
@@ -46,7 +46,7 @@
         <!--Row 3-->
         <TextBlock Grid.Row="3" FontSize="18px" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="4,4,4,4" Padding="10,0,10,0">Path</TextBlock>
         <!--Row 4-->
-        <TextBox x:Name="PathTextBox" Grid.Row="4" Grid.ColumnSpan="3" Margin="4,4,4,4" FontSize="18px" VerticalContentAlignment="Center">
+        <TextBox x:Name="PathTextBox" Grid.Row="4" Grid.ColumnSpan="3" Margin="4,4,4,12" FontSize="18px" VerticalContentAlignment="Center">
         </TextBox>
         <!--Row 5-->
         <TextBox x:Name="InfoTextBox" Grid.Row="5" Grid.ColumnSpan="2" Margin="5" FontSize="16" IsReadOnly="True" Background="#FFEFEFEF" Foreground="Red"></TextBox>
